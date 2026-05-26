@@ -21,4 +21,4 @@ jobs:
         run: pip install pytest
 
       - name: テストを実行
-        run: pytest test_calc.py
+        run: pytest test_calc.py test_app.py -v
