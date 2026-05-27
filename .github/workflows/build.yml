@@ -1,0 +1,20 @@
+name: C Build
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: ビルド
+        run: gcc hello.c -o hello
+
+      - name: 実行
+        run: ./hello
